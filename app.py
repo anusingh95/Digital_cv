@@ -57,29 +57,11 @@ with open(resume_file, "rb") as pdf_file:
     PDF = pdf_file.read()
 profile_pic = Image.open(profile_pic)
 
-col1, col2 = st.columns([1, 1])
+col1, spacer, col2 = st.columns([8, 3.5, 8])
 
-# Insert an image in col1
 with col1:
-    st.image("profile_pic", width=400)
-
-# Use Streamlit markdown to insert custom CSS
-# This CSS snippet sets a height limit for the col2 and adds a scrollbar if needed
-st.markdown(
-    """
-    <style>
-    .column-height-limited {
-        max-height: 200px;  /* Set your desired height */
-        overflow-y: auto;   /* Adds a scrollbar if content exceeds height */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-# Apply the CSS class to the column
+    st.image(profile_pic,width = 350)
 with col2:
-    st.markdown('<div class="column-height-limited">This is content in column 2 with a limited height. It can contain any Streamlit components. If the content exceeds the specified height, a scrollbar will appear.</div>', unsafe_allow_html=True)
     st.title(NAME)
     st.markdown('''
 <div style="text-align: justify">Greetings! I'm Anu Kumari, and I'm thrilled to welcome you to my corner of the digital universe. My passion for technology knows no bounds, and I specialize in the dynamic realms of Machine Learning, Data Science, AI, and Web Development</div>
