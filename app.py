@@ -105,7 +105,7 @@ st.write("#")
 #         st.markdown(hide_img_fs, unsafe_allow_html=True)
 
 
-tabs = ["About Me", "Ask Anything", "Contact", "Leave Your Review", "My Blog"]
+tabs = st.tabs(["About Me", "Ask Anything", "Contact", "Leave Your Review", "My Blog"])
 
 
 
