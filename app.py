@@ -63,7 +63,7 @@ profile_pic = Image.open(profile_pic)
 col1, spacer, col2 = st.columns([8, 3.5, 8])
 
 with col1:
-    st.image(profile_pic,width = 350)
+    st.image(profile_pic,width = 250)
 with col2:
     st.title(NAME)
     st.write(DESCRIPTION)
