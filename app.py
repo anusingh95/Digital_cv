@@ -137,7 +137,7 @@ with tabs[0]:
     st.subheader("Skills")
     st.write(
     '''
-    - 👩🏻‍💻 programming: C++, Java, React.js, HTML, CSS, javaScrit
+    - 👩🏻‍💻 Programming: C++, Java, React.js, HTML, CSS, javaScrit
     - 🐍 Python Programming: Numpy, Pandas, sklearn, Pytorch, Keras, Streamlit, Seaborn, Mathplotlib, tensorflow, nltk, Plotly, Faiss, langchain
     - 🧠 Machine Learning: Decision Tree, Neural Networks, Clustering, Classification, Deep Learning
     - 🐧 Linux: Linux System Administration,C/C++/Java/Python coding debugging in terminal
