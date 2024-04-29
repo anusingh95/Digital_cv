@@ -2,4 +2,4 @@ langchain_google_genai
 langchain
 langchain_community
 pymongo
-FAISS
+faiss-cpu
