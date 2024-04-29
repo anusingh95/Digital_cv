@@ -57,7 +57,11 @@ with open(resume_file, "rb") as pdf_file:
     PDF = pdf_file.read()
 profile_pic = Image.open(profile_pic)
 
-col1, spacer, col2 = st.columns([8, 3.5, 8])
+desired_width = 400
+desired_height = 400 
+profile_pic = profile_pic.resize((desired_width, desired_height), Image.ANTIALIAS)
+with col1:
+    st.image(profile_pic, width=desired_width)
 
 with col1:
     st.image(profile_pic,width = 350)
