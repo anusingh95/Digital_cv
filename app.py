@@ -105,7 +105,9 @@ st.write("#")
 #         st.markdown(hide_img_fs, unsafe_allow_html=True)
 
 
-tabs = st.tabs(["About Me", "Ask Anything", "Contact", "Leave Your Review", "My Blog"])
+listtabs = ["About Me", "Ask Anything", "Contact", "Leave Your Review", "My Blog"]
+whitespace = 9
+tabs = st.tabs([s.center(whitespace,"\u2001") for s in listtabs])
 
 
 
