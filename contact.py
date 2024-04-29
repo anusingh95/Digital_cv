@@ -7,12 +7,10 @@ from email import encoders
 import os
 from email.header import Header
 from email.utils import formataddr
-from dotenv import load_dotenv
-load_dotenv()
 
 email = "anusingh26may@gmail.com"
 receiver_email = "anusinghpu26@gmail.com"
-password= os.getenv("email_password")
+password= st.secrets['email_password']
 
 
 
