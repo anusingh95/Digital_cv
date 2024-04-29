@@ -8,12 +8,12 @@ import pymongo
 from pymongo import MongoClient
 from bson.objectid import ObjectId  # To work with ObjectId in MongoDB
 import os
-from dotenv import load_dotenv
+
 
 from datetime import datetime
 import pytz
 from datetime import timedelta
-load_dotenv()
+
 import requests
 
 def get_image_from_drive(link):
@@ -22,7 +22,7 @@ def get_image_from_drive(link):
     url = f"https://drive.google.com/uc?export=view&id={file_id}"
     response = requests.get(url)
     return response.content
-connection_string = os.getenv("mongo")
+connection_string = st.secrets['mongo']
 def validate_email(email):
     email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     return re.match(email_regex, email)
