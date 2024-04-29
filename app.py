@@ -33,7 +33,7 @@ def validate_phone_number(phone_number):
     return re.match(phone_regex, phone_number)
 
 css_file = current_dir/"styles"/ "main.css"
-resume_file = current_dir/"assests"/"Anu_Kumari_CV11.pdf"
+resume_file = current_dir/"assests"/"Anu_Kumari_CV.pdf"
 profile_pic = current_dir/"assests"/"anu.jpeg"
 social_logo = current_dir/"assests"
 
