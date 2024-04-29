@@ -40,9 +40,6 @@ social_logo = current_dir/"assests"
 PAGE_TITLE = "Digital CV | Anu Kumari"
 PAGE_ICON = ":wave:"
 NAME ="Anu Kumari"
-DESCRIPTION ="""
-Hello,
-I am Anu Kumari My areas of expertise are Machine Learning, Data Science, and Web Development."""
 EMAIL ="anusinghpu26@gmail.com"
 PROJECTS={
     "📄 Multi-Dimensional CV with AI":"https://github.com/anusingh95/Digital_cv",
@@ -66,7 +63,10 @@ with col1:
     st.image(profile_pic,width = 250)
 with col2:
     st.title(NAME)
-    st.write(DESCRIPTION)
+    st.markdown('''
+<div style="text-align: justify">Hello,
+I am Anu Kumari My areas of expertise are Machine Learning, Data Science, and Web Development.</div>
+''', unsafe_allow_html=True)
     st.download_button(
         label="📄 Download Resume",
         data = PDF,
