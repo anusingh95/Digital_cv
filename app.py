@@ -124,12 +124,13 @@ with tabs[0]:
 ''', unsafe_allow_html=True)
     st.write("---")
     st.subheader("Experience & Qualifications")
-    st.write("""
-            - 🎓 Pursuing a Master's degree in Computer Science from Pondicherry University, expected to graduate in May 2024        
+    st.markdown('''
+<div style="text-align: justify">- 🎓 Pursuing a Master's degree in Computer Science from Pondicherry University, expected to graduate in May 2024        
             - 🎓 Earned a Bachelor's degree in Bachelor of Computer Application from Deen Dayal Upadhyaya University Gorakhpur(UP) in August 2021
             - 🔎 Strong problem-solving and analytical skills
             - 💬 Good communication and teamwork skills
-            """)
+            </div>
+''', unsafe_allow_html=True)
     st.write("---")
     st.subheader("Skills")
     st.write(
