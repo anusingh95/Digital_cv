@@ -86,23 +86,23 @@ platform_images = {
 
     
 st.write("#")
-cols = st.columns(len(SOCIAL_MEDIA))
-for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-    # Displaying the image with a width of 24
-    image_path = f"./assests/{platform_images[platform]}"
-    img = Image.open(image_path)
-    with cols[index]:
-        subcol1, subcol2 = st.columns([0.1,1])
-        subcol1.image(img, width=24, use_column_width=False)
-        subcol2.write(f"[{platform}]({link})")
-        hide_img_fs = '''
-        <style>
-        button[title="View fullscreen"]{
-            visibility: hidden;}
-        </style>
-        '''
+# cols = st.columns(len(SOCIAL_MEDIA))
+# for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
+#     # Displaying the image with a width of 24
+#     image_path = f"./assests/{platform_images[platform]}"
+#     img = Image.open(image_path)
+#     with cols[index]:
+#         subcol1, subcol2 = st.columns([0.1,1])
+#         subcol1.image(img, width=24, use_column_width=False)
+#         subcol2.write(f"[{platform}]({link})")
+#         hide_img_fs = '''
+#         <style>
+#         button[title="View fullscreen"]{
+#             visibility: hidden;}
+#         </style>
+#         '''
 
-        st.markdown(hide_img_fs, unsafe_allow_html=True)
+#         st.markdown(hide_img_fs, unsafe_allow_html=True)
 
 
 tabs = st.tabs(["About Me","Ask Anything","Contact","Leave Your Review","My Blog"])
