@@ -152,20 +152,18 @@ with tabs[0]:
     st.write("---")
 
 with tabs[1]:
-    context = ""
-    chats = []
-
-    cool_header()
-
+     cool_header()
     user_question = st.text_input("Enter you question here")
     chats = st.session_state.get('chats', [])
     
     if st.button("Ask", key="ask_button"):
         with st.spinner("Amy is thinking..."):
             if user_question:
-                context, chats = user_input(user_question, context, chats)
+                chats = user_input(user_question, chats)
                 st.session_state['chats'] = chats
                 user_question = ""  # Clear input field after asking
+                
+    display_chat(chats)
                 
     display_chat(chats)
 with tabs[2]:
