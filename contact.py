@@ -10,7 +10,7 @@ from email.utils import formataddr
 
 email = "anusingh26may@gmail.com"
 receiver_email = "anusinghpu26@gmail.com"
-password= st.secrets['email_password']
+password= st.secrets['api']['email_password']
 
 
 
