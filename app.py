@@ -59,7 +59,7 @@ profile_pic = Image.open(profile_pic)
 
 desired_width = 400
 desired_height = 400 
-profile_pic = profile_pic.resize((desired_width, desired_height), Image.ANTIALIAS)
+
 with col1:
     st.image(profile_pic, width=desired_width)
 
