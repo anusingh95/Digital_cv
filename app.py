@@ -107,16 +107,7 @@ st.write("#")
 
 tabs = ["About Me", "Ask Anything", "Contact", "Leave Your Review", "My Blog"]
 
-# Calculate the width of each tab
-tab_width = 100 / len(tabs)
 
-# Create the tabs
-with st.container():
-    for tab in tabs:
-        st.write("|", end='')
-        st.write(f" {tab} ", end='')
-        st.write("|", end='')
-        st.write("&nbsp;" * int(tab_width), unsafe_allow_html=True)  # Add empty space between tabs
 
 with tabs[0]:
     st.write('#')
