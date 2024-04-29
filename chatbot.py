@@ -1,13 +1,13 @@
 import streamlit as st
 from PyPDF2 import PdfReader
 import os
-from dotenv import load_dotenv
+
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain.prompts import PromptTemplate
 from langchain.chains.question_answering import load_qa_chain
 from langchain_community.vectorstores import FAISS
 
-load_dotenv()
+
 GOOGLE_API_KEY = st.secrets['API_KEY']
 
 if not GOOGLE_API_KEY:
