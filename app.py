@@ -117,10 +117,11 @@ tabs = st.tabs([s.center(whitespace,"\u2001") for s in listtabs])
 with tabs[0]:
     st.write('#')
     st.subheader("About Me")
-    st.write('''
-            
+    st.markdown('''
+<div style="text-align: justify">
     I am an aspiring computer scientist with strong skills in C++, Java,Python, Web development, and applied machine learning. I have demonstrated the ability to create data-driven solutions using statistical modeling and algorithmic optimization techniques. I am passionate about innovation and learning new technologies. I am seeking a challenging role in a forward-thinking organization where I can contribute my expertise, collaborate on impactful projects, and push the technological boundaries.
-            ''')
+</div>
+''', unsafe_allow_html=True)
     st.write("---")
     st.subheader("Experience & Qualifications")
     st.write("""
