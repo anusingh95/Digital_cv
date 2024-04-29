@@ -60,7 +60,7 @@ profile_pic = Image.open(profile_pic)
 col1, spacer, col2 = st.columns([10, 2, 8])
 
 # Display the image in the first column with a specified width
-with col2:
+with col1:
     st.image(profile_pic, width=400)
 with col2:
     st.title(NAME)
