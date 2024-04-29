@@ -65,7 +65,7 @@ with col2:
     st.title(NAME)
     st.markdown('''
 <div style="text-align: justify">Hello,
-I am Anu Kumari My areas of expertise are Machine Learning, Data Science, and Web Development.</div>
+I am Anu Kumari My areas of expertise are Machine Learning, Data Science, AI, and Web Development.</div>
 ''', unsafe_allow_html=True)
     st.download_button(
         label="📄 Download Resume",
