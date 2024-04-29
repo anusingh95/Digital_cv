@@ -61,7 +61,7 @@ col1, col2 = st.columns([1, 1])
 
 # Insert an image in col1
 with col1:
-    st.image("profile_file", width=400)
+    st.image("profile_pic", width=400)
 
 # Use Streamlit markdown to insert custom CSS
 # This CSS snippet sets a height limit for the col2 and adds a scrollbar if needed
