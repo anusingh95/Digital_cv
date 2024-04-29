@@ -1,8 +1,4 @@
 
-PIL
-re
-pytz
+
 PyPDF2
-langchain_google_genai
-langchain
-langchain_community
+
