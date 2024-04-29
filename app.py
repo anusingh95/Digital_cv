@@ -165,7 +165,6 @@ with tabs[1]:
                 
     display_chat(chats)
                 
-    display_chat(chats)
 with tabs[2]:
     st.title("Email Form")
 
