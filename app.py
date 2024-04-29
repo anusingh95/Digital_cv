@@ -122,10 +122,9 @@ with tabs[0]:
     I am an aspiring computer scientist with strong skills in C++, Java,Python, Web development, and applied machine learning. I have demonstrated the ability to create data-driven solutions using statistical modeling and algorithmic optimization techniques. I am passionate about innovation and learning new technologies. I am seeking a challenging role in a forward-thinking organization where I can contribute my expertise, collaborate on impactful projects, and push the technological boundaries.
 </div>
 ''', unsafe_allow_html=True)
+    st.markdown("<font color=red>*If you want to learn more about me, just hop over to the Ask Anything tab. My AI assistant there can fill you in on all the details about me and my career projects.*</font>", unsafe_allow_html=True)
     st.write("---")
-    st.subheader("To Know More About Me")
-    st.write("""Visit the "Ask Anything" Tab: This section contains a variety of information and frequently asked questions that can help you get to know me better.""")
-    st.write("---")
+    
     st.subheader("Experience & Qualifications")
     st.write("""
             - 🎓 Pursuing a Master's degree in Computer Science from Pondicherry University, expected to graduate in May 2024        
