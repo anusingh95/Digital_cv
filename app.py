@@ -113,10 +113,10 @@ tab_width = 100 / len(tabs)
 # Create the tabs
 with st.container():
     for tab in tabs:
-        st.write(" " * int(tab_width/2))  # Adjust space to center the text
-        st.write(f"[{tab}]")
-        st.write(" " * int(tab_width/2))  # Adjust space to center the text
-        st.write("|")  # Add a separator between tabs
+        st.write("|", end='')
+        st.write(f" {tab} ", end='')
+        st.write("|", end='')
+        st.write("&nbsp;" * int(tab_width), unsafe_allow_html=True)  # Add empty space between tabs
 
 with tabs[0]:
     st.write('#')
