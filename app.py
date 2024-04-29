@@ -106,7 +106,7 @@ st.write("#")
 
 
 listtabs = ["About Me", "Ask Anything", "Contact", "Leave Your Review", "My Blog"]
-whitespace = 9
+whitespace = 20
 tabs = st.tabs([s.center(whitespace,"\u2001") for s in listtabs])
 
 
