@@ -1,13 +1,18 @@
 import streamlit as st
+import os
+from dotenv import load_dotenv
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain.prompts import PromptTemplate
 from langchain.chains.question_answering import load_qa_chain
 from langchain_community.vectorstores import FAISS
 
-GOOGLE_API_KEY = st.secrets['api']['API_KEY']
+load_dotenv()
+GOOGLE_API_KEY = os.getenv("API_KEY")
 
 if not GOOGLE_API_KEY:
     raise ValueError("GOOGLE_API_KEY not found. Please set it in your .env file.")
+
+
 
 def get_conversational_chain():
     prompt_template = """
@@ -26,30 +31,22 @@ def get_conversational_chain():
 
     return chain
 
-def user_input(user_question, context, chats):
+def user_input(user_question, chats):
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=GOOGLE_API_KEY)
     
     new_db = FAISS.load_local("chatbot", embeddings, allow_dangerous_deserialization=True)
     docs = new_db.similarity_search(user_question)
 
     chain = get_conversational_chain()
-    
-    # Add previous context to user_question if not found in current question
-    if context and context not in user_question:
-        user_question = context + " " + user_question
 
     response = chain(
         {"input_documents": docs, "question": user_question},
         return_only_outputs=True
     )
     
-    # Update context
-    if "context" in response:
-        context = response["context"]
-    
     chats.insert(0, {"User": user_question, "Amy": response["output_text"]})
     
-    return context, chats
+    return chats
 
 def cool_header():
     st.title("🚀 Chat with Amy, my AI assistant💁")
@@ -59,5 +56,4 @@ def display_chat(chats):
     for chat in chats:
         st.write(f"You: {chat['User']}")
         st.write(f"Amy: {chat['Amy']}")
-
 
