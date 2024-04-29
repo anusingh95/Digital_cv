@@ -1,16 +1,8 @@
 streamlit
-pymongo
-os
-dotenv
-datetime
-pathlib
+pymongo==3.11.1
 PIL
 re
 pytz
-requests
-smtplib
-ssl
-email
 PyPDF2
 langchain_google_genai
 langchain
