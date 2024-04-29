@@ -87,8 +87,8 @@ platform_images = {
     
 st.write("#")
 SOCIAL_MEDIA={
-    "LinkedIN":"https://www.linkedin.com/in/nilanjan-ghosh-a25747282/",
-    "GitHub":"https://github.com/nil0711",
+    "LinkedIN":"https://www.linkedin.com/in/anu-singh-in/",
+    "GitHub":"https://github.com/anusingh95",
    
     
 
@@ -107,7 +107,7 @@ for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
     image_path = f"{social_logo}/{platform_images[platform]}"
     img = Image.open(image_path)
     with cols[index]:
-        subcol1, subcol2 = st.columns([0.1,1])
+        subcol1, subcol2 = st.columns([0.5,1])
         subcol1.image(img, width=24, use_column_width=False)
         subcol2.write(f"[{platform}]({link})")
         hide_img_fs = '''
