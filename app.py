@@ -152,7 +152,7 @@ with tabs[0]:
     st.write("---")
 
 with tabs[1]:
-     cool_header()
+    cool_header()
     user_question = st.text_input("Enter you question here")
     chats = st.session_state.get('chats', [])
     
