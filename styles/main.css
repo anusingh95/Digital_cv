@@ -1,0 +1,107 @@
+/* Importing a modern font and defining a consistent color palette */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* Global color variables for consistency throughout the CSS */
+:root {
+    --primary-color: #1abc9c; /* Teal */
+    --secondary-color: #16a085; /* Dark teal */
+    --accent-color: #f39c12; /* Orange for hover effects */
+    --background-color: #f5f5f5; /* Light background */
+    --text-color: #34495e; /* Dark gray text */
+}
+
+/* Applying global font settings and default styles */
+* {
+    font-family: 'Lato', sans-serif; /* New font choice */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 200px;
+}
+
+/* Styling hyperlinks with transitions for smoother interactivity */
+a {
+    text-decoration: none;
+    color: var(--primary-color); /* Use teal for links */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color); /* Orange for hover */
+}
+
+/* Styled unordered lists with no bullet points */
+ul {
+    list-style-type: none;
+}
+
+/* Styled horizontal rules for cleaner separation */
+hr {
+    border: none;
+    border-top: 1px solid var(--text-color); /* Dark gray for subtle separation */
+    margin: 20px 0;
+}
+
+/* Make hidden sections invisible */
+#MainMenu,
+footer,
+header {
+    visibility: hidden;
+}
+
+/* Adding hover effects for Streamlit columns */
+.streamlit-column {
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.streamlit-column:hover {
+    background-color: var(--secondary-color); /* Dark teal on hover */
+}
+
+/* Styling buttons with rounded corners and hover effects */
+.stButton > button {
+    background-color: var(--primary-color); /* Use teal */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px; /* Slightly more rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: var(--secondary-color); /* Dark teal on hover */
+}
+
+/* Additional styling for download buttons */
+.stDownloadButton > button {
+    background-color: var(--accent-color); /* Orange for download button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.stDownloadButton > button:hover {
+    background-color: #e67e22; /* Brighter orange on hover */
+}
+
+/* Tabs styling with clear transitions */
+.streamlit-tabs {
+    border-bottom: 2px solid var(--text-color); /* Dark gray border for tab separation */
+}
+
+.streamlit-tabs:hover {
+    background-color: var(--accent-color); /* Orange hover effect for tabs */
+}
+
+/* Padding for a cleaner layout */
+.streamlit-expander {
+    padding: 15px; /* Increased padding */
+    margin: 15px; /* Increased margin */
+}
