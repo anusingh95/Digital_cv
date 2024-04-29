@@ -50,20 +50,25 @@ def user_input(user_question, chats):
 def cool_header():
     st.title("🚀 Chat with Amy, my AI assistant💁")
     st.markdown("Amy is a chatbot designed to answer your queries about me")
-    
 def display_chat(chats):
-    # Create a set to keep track of unique chats
-    unique_chats = set()
-    
-    # Iterate over chats in reverse order to display the most recent chats first
-    for chat in reversed(chats):
-        # Check if the chat is unique
-        if (chat['User'], chat['Amy']) not in unique_chats:
-            # Display the chat
-            st.write(f"You: {chat['User']}")
-            st.write(f"Amy: {chat['Amy']}")
-                        
-            # Add the chat to the set of unique chats
-            unique_chats.add((chat['User'], chat['Amy']))
+    for chat in chats:
+        st.write(f"You: {chat['User']}")
+        st.write(f"Amy: {chat['Amy']}")
 
+# Streamlit arayüzü
+cool_header()
+
+# Sohbet geçmişi için Streamlit durumu
+if 'chats' not in st.session_state:
+    st.session_state['chats'] = []
+
+# Kullanıcıdan girdi alma
+user_question = st.text_input("Enter your question:")
+
+# Eğer kullanıcı bir giriş yapmışsa, sohbeti güncelle
+if user_question:
+    st.session_state['chats'] = user_input(user_question, st.session_state['chats'])
+
+# Sohbet geçmişini göster
+display_chat(st.session_state['chats'])
 
