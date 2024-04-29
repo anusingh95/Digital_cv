@@ -52,7 +52,7 @@ def cool_header():
     st.markdown("Amy is a chatbot designed to answer your queries about me")
     
 def display_chat(chats):
-    # for chat in chats:
+    for chat in chats:
         st.write(f"You: {chat['User']}")
         st.write(f"Amy: {chat['Amy']}")
 
