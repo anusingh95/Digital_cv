@@ -57,7 +57,7 @@ with open(resume_file, "rb") as pdf_file:
     PDF = pdf_file.read()
 profile_pic = Image.open(profile_pic)
 
-col1, col2, col3 = st.columns([1, 2, 1])
+col1, col2, col3 = st.columns([1, 0, 1])
 with col2:
     st.image(profile_pic, width=250, caption="Profile Picture", use_column_width=True)
     st.title(NAME)
