@@ -51,12 +51,19 @@ def cool_header():
     st.title("🚀 Chat with Amy, my AI assistant💁")
     st.markdown("Amy is a chatbot designed to answer your queries about me")
     
-def user_input(user_question, chats):
-    # Code to get the response from your chatbot
+def display_chat(chats):
+    # Create a set to keep track of unique chats
+    unique_chats = set()
     
-    # Prevent duplicate insertion
-    if not any(chat['User'] == user_question and chat['Amy'] == response['output_text'] for chat in chats):
-        chats.insert(0, {"User": user_question, "Amy": response["output_text"]})
-    
-    return chats
+    # Iterate over chats in reverse order to display the most recent chats first
+    for chat in reversed(chats):
+        # Check if the chat is unique
+        if (chat['User'], chat['Amy']) not in unique_chats:
+            # Display the chat
+            st.write(f"You: {chat['User']}")
+            # st.write(f"Amy: {chat['Amy']}")
+            
+            # Add the chat to the set of unique chats
+            unique_chats.add((chat['User'], chat['Amy']))
+
 
