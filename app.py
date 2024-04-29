@@ -15,7 +15,7 @@ import pytz
 from datetime import timedelta
 
 import requests
-
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd
 def get_image_from_drive(link):
     # Extract the file ID from the Google Drive link
     file_id = link.split("/")[-2]
@@ -32,10 +32,10 @@ def validate_phone_number(phone_number):
     phone_regex = r'^[6-9]\d{9}$'
     return re.match(phone_regex, phone_number)
 
-css_file = "styles/main.css"
-resume_file = "assests/Anu_Kumari_CV11.pdf"
-profile_pic = "assests/anu.jpeg"
-
+css_file = current_dir/"styles"/ "main.css"
+resume_file = current_dir/"assets"/"Anu_Kumari_CV11.pdf"
+profile_pic = current_dir/"assets"/"anu.jpeg"
+social_logo = current_dir/"assets"
 
 PAGE_TITLE = "Digital CV | Anu Kumari"
 PAGE_ICON = ":wave:"
@@ -86,23 +86,38 @@ platform_images = {
 
     
 st.write("#")
-# cols = st.columns(len(SOCIAL_MEDIA))
-# for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-#     # Displaying the image with a width of 24
-#     image_path = f"./assests/{platform_images[platform]}"
-#     img = Image.open(image_path)
-#     with cols[index]:
-#         subcol1, subcol2 = st.columns([0.1,1])
-#         subcol1.image(img, width=24, use_column_width=False)
-#         subcol2.write(f"[{platform}]({link})")
-#         hide_img_fs = '''
-#         <style>
-#         button[title="View fullscreen"]{
-#             visibility: hidden;}
-#         </style>
-#         '''
+SOCIAL_MEDIA={
+    "LinkedIN":"https://www.linkedin.com/in/nilanjan-ghosh-a25747282/",
+    "GitHub":"https://github.com/nil0711",
+    "X":"https://twitter.com/csnil0711",
+    
 
-#         st.markdown(hide_img_fs, unsafe_allow_html=True)
+}
+platform_images = {
+    "LinkedIN": "linkedin.png",
+    "GitHub": "github.png",
+    "X": "x.png",
+}
+
+    
+st.write("#")
+cols = st.columns(len(SOCIAL_MEDIA))
+for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
+    # Displaying the image with a width of 24
+    image_path = f"{social_logo}/{platform_images[platform]}"
+    img = Image.open(image_path)
+    with cols[index]:
+        subcol1, subcol2 = st.columns([0.1,1])
+        subcol1.image(img, width=24, use_column_width=False)
+        subcol2.write(f"[{platform}]({link})")
+        hide_img_fs = '''
+        <style>
+        button[title="View fullscreen"]{
+            visibility: hidden;}
+        </style>
+        '''
+
+        st.markdown(hide_img_fs, unsafe_allow_html=True)
 
 
 listtabs = ["About Me", "Ask Anything", "Contact", "Leave Your Review", "My Blog"]
