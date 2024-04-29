@@ -57,7 +57,7 @@ with open(resume_file, "rb") as pdf_file:
     PDF = pdf_file.read()
 profile_pic = Image.open(profile_pic)
 
-col1, spacer, col2 = st.columns([8, 3.1, 8])
+col1, spacer, col2 = st.columns([8, 4.1, 5])
 
 with col1:
     st.image(profile_pic,width = 250)
@@ -152,14 +152,18 @@ with tabs[0]:
     st.write("---")
 
 with tabs[1]:
+    context = ""
+    chats = []
+
     cool_header()
+
     user_question = st.text_input("Enter you question here")
     chats = st.session_state.get('chats', [])
     
     if st.button("Ask", key="ask_button"):
         with st.spinner("Amy is thinking..."):
             if user_question:
-                chats = user_input(user_question, chats)
+                context, chats = user_input(user_question, context, chats)
                 st.session_state['chats'] = chats
                 user_question = ""  # Clear input field after asking
                 
