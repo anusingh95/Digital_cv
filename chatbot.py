@@ -8,7 +8,7 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain_community.vectorstores import FAISS
 
 
-GOOGLE_API_KEY = st.secrets['API_KEY']
+GOOGLE_API_KEY = st.secrets['api']['API_KEY']
 
 if not GOOGLE_API_KEY:
     raise ValueError("GOOGLE_API_KEY not found. Please set it in your .env file.")
