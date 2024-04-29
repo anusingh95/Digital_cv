@@ -45,9 +45,9 @@ Hello,
 I am Anu Kumari My areas of expertise are Machine Learning, Data Science, and Web Development."""
 EMAIL ="anusinghpu26@gmail.com"
 PROJECTS={
-    ":Machine Learning:AI-Powered Violence Detection through Surveillance Cameras"
-    ":Machine Learning: AI-Driven Customer Support Chatbots"
-    ":Web Development Project :Online Shopping Website":"Mini Project"
+    ":Machine Learning:AI-Powered Violence Detection through Surveillance Cameras":"",
+    ":Machine Learning: AI-Driven Customer Support Chatbots":"",
+    ":Web Development Project :Online Shopping Website":"Mini Project":""
 }
 st.set_page_config(page_title = PAGE_TITLE,page_icon=PAGE_ICON ,initial_sidebar_state="collapsed")
 
