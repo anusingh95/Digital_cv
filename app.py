@@ -87,12 +87,13 @@ platform_images = {
 }
 
 # Create columns for each social media platform
-cols = st.columns(len(SOCIAL_MEDIA))
+col0, col1,col2,col3,col4=st.columns(5)
+cols = [col0,col1,col2,col3,col4]
 for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
     # Display the image with a width of 24
     image_path = f"{social_logo}/{platform_images[platform]}"
     img = Image.open(image_path)
-    with cols[index]:
+    with cols[2*index+1]:
         subcol1, subcol2 = st.columns([0.1, 1])
         subcol1.image(img, width=24, use_column_width=False)
         subcol2.write(f"{platform}")
