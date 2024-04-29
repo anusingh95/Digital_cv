@@ -125,7 +125,7 @@ with tabs[0]:
     st.write("---")
     st.subheader("To Know More About Me")
     st.write("""Visit the "Ask Anything" Tab: This section contains a variety of information and frequently asked questions that can help you get to know me better.""")
-    st.write("...")
+    st.write("#")
     st.subheader("Experience & Qualifications")
     st.write("""
             - 🎓 Pursuing a Master's degree in Computer Science from Pondicherry University, expected to graduate in May 2024        
