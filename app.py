@@ -109,38 +109,38 @@ tabs = st.tabs(["About Me","Ask Anything","Contact","Leave Your Review","My Blog
 
 with tabs[0]:
     st.write('#')
-st.subheader("About Me")
-st.write('''
-        
-I am an aspiring computer scientist with strong skills in C++, Java,Python, Web development, and applied machine learning. I have demonstrated the ability to create data-driven solutions using statistical modeling and algorithmic optimization techniques. I am passionate about innovation and learning new technologies. I am seeking a challenging role in a forward-thinking organization where I can contribute my expertise, collaborate on impactful projects, and push the technological boundaries.
-        ''')
-st.write("---")
-st.subheader("Experience & Qualifications")
-st.write("""
-        - 🎓 Pursuing a Master's degree in Computer Science from Pondicherry University, expected to graduate in May 2024        
-        - 🎓 Earned a Bachelor's degree in Bachelor of Computer Application from Deen Dayal Upadhyaya University Gorakhpur(UP) in August 2021
-        - 🔎 Strong problem-solving and analytical skills
-        - 💬 Good communication and teamwork skills
-        """)
-st.write("---")
-st.subheader("Skills")
-st.write(
-'''
-- 👩🏻‍💻 programming: C++, Java, React.js, HTML, CSS, javaScrit
-- 🐍 Python Programming: Numpy, Pandas, sklearn, Pytorch, Keras, Streamlit, Seaborn, Mathplotlib, tensorflow, nltk, Plotly, Faiss, langchain
-- 🧠 Machine Learning: Decision Tree, Neural Networks, Clustering, Classification, Deep Learning
-- 🐧 Linux: Linux System Administration,C/C++/Java/Python coding debugging in terminal
-- 💾 Databases: MongoDB, MySql
-
-'''
-)
-st.write("---")
-st.write("---")
-st.subheader("Projects & Accomplishments")
-for project, link in PROJECTS.items():
-  st.write(f"- [{project}]({link})")
-
-st.write("---")
+    st.subheader("About Me")
+    st.write('''
+            
+    I am an aspiring computer scientist with strong skills in C++, Java,Python, Web development, and applied machine learning. I have demonstrated the ability to create data-driven solutions using statistical modeling and algorithmic optimization techniques. I am passionate about innovation and learning new technologies. I am seeking a challenging role in a forward-thinking organization where I can contribute my expertise, collaborate on impactful projects, and push the technological boundaries.
+            ''')
+    st.write("---")
+    st.subheader("Experience & Qualifications")
+    st.write("""
+            - 🎓 Pursuing a Master's degree in Computer Science from Pondicherry University, expected to graduate in May 2024        
+            - 🎓 Earned a Bachelor's degree in Bachelor of Computer Application from Deen Dayal Upadhyaya University Gorakhpur(UP) in August 2021
+            - 🔎 Strong problem-solving and analytical skills
+            - 💬 Good communication and teamwork skills
+            """)
+    st.write("---")
+    st.subheader("Skills")
+    st.write(
+    '''
+    - 👩🏻‍💻 programming: C++, Java, React.js, HTML, CSS, javaScrit
+    - 🐍 Python Programming: Numpy, Pandas, sklearn, Pytorch, Keras, Streamlit, Seaborn, Mathplotlib, tensorflow, nltk, Plotly, Faiss, langchain
+    - 🧠 Machine Learning: Decision Tree, Neural Networks, Clustering, Classification, Deep Learning
+    - 🐧 Linux: Linux System Administration,C/C++/Java/Python coding debugging in terminal
+    - 💾 Databases: MongoDB, MySql
+    
+    '''
+    )
+    st.write("---")
+    st.write("---")
+    st.subheader("Projects & Accomplishments")
+    for project, link in PROJECTS.items():
+      st.write(f"- [{project}]({link})")
+    
+    st.write("---")
 
 with tabs[1]:
     cool_header()
