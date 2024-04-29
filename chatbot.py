@@ -60,9 +60,9 @@ def display_chat(chats):
         # Check if the chat is unique
         if (chat['User'], chat['Amy']) not in unique_chats:
             # Display the chat
-st.write(f"You: {chat['User']}")
-st.write(f"Amy: {chat['Amy']}")
-            
+            st.write(f"You: {chat['User']}")
+            st.write(f"Amy: {chat['Amy']}")
+                        
             # Add the chat to the set of unique chats
             unique_chats.add((chat['User'], chat['Amy']))
 
