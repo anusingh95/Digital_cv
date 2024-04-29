@@ -96,7 +96,7 @@ for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
     with cols[2*index+1]:
         subcol1, subcol2 = st.columns([0.3, 1])
         subcol1.image(img, width=24, use_column_width=False)
-        subcol2.write(f"{platform}")
+        subcol2.write(f"[{platform}]({link})")
         hide_img_fs = '''
         <style>
         button[title="View fullscreen"]{
