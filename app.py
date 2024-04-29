@@ -73,53 +73,34 @@ with col2:
         
     )
     st.write("📨", EMAIL)
-SOCIAL_MEDIA={
-    "LinkedIN":"https://www.linkedin.com/in/anu-singh-in/",
-    "GitHub":"https://github.com/anusingh95",
-    
-
+SOCIAL_MEDIA = {
+    "LinkedIN": "https://www.linkedin.com/in/anu-singh-in/",
+    "GitHub": "https://github.com/anusingh95",
 }
+
+# Define platform images
 platform_images = {
     "LinkedIN": "linkedin.png",
     "GitHub": "github.png",
 }
 
-    
-st.write("#")
-SOCIAL_MEDIA={
-    "LinkedIN":"https://www.linkedin.com/in/anu-singh-in/",
-    "GitHub":"https://github.com/anusingh95",
-   
-    
-
-}
-platform_images = {
-    "LinkedIN": "linkedin.png",
-    "GitHub": "github.png",
-    
-}
-
-    
-st.write("#")
-with st.container():
-    cols = st.columns(len(SOCIAL_MEDIA))
-    for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-        # Displaying the image with a width of 24
-        image_path = f"{social_logo}/{platform_images[platform]}"
-        img = Image.open(image_path)
-        with cols[index]:
-            subcol1, subcol2 = st.columns([0.1,1])
-            subcol1.image(img, width=24, use_column_width=False)
-            subcol2.write(f"[{platform}]({link})")
-            hide_img_fs = '''
-            <style>
-            button[title="View fullscreen"]{
-                visibility: hidden;}
-            </style>
-            '''
-    
-            st.markdown(hide_img_fs, unsafe_allow_html=True)
-
+# Create columns for each social media platform
+cols = st.columns(len(SOCIAL_MEDIA))
+for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
+    # Display the image with a width of 24
+    image_path = f"{social_logo}/{platform_images[platform]}"
+    img = Image.open(image_path)
+    with cols[index]:
+        subcol1, subcol2 = st.columns([0.1, 1])
+        subcol1.image(img, width=24, use_column_width=False)
+        subcol2.write(f"{platform}")
+        hide_img_fs = '''
+        <style>
+        button[title="View fullscreen"]{
+            visibility: hidden;}
+        </style>
+        '''
+        st.markdown(hide_img_fs, unsafe_allow_html=True)
 
 listtabs = ["About Me", "Ask Anything", "Contact", "Leave Your Review", "My Blog"]
 whitespace = 13
