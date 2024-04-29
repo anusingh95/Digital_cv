@@ -57,9 +57,11 @@ with open(resume_file, "rb") as pdf_file:
     PDF = pdf_file.read()
 profile_pic = Image.open(profile_pic)
 
-col1, col2, col3 = st.columns([1, 2, 1])
+col1, spacer, col2 = st.columns([8, 3.5, 8])
+
 with col1:
-    st.image(profile_pic, width=250, caption="Profile Picture", use_column_width=True)
+    st.image(profile_pic,width = 350)
+with col2:
     st.title(NAME)
     st.markdown('''
 <div style="text-align: justify">Greetings! I'm Anu Kumari, and I'm thrilled to welcome you to my corner of the digital universe. My passion for technology knows no bounds, and I specialize in the dynamic realms of Machine Learning, Data Science, AI, and Web Development</div>
