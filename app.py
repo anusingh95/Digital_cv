@@ -94,7 +94,7 @@ for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
     image_path = f"{social_logo}/{platform_images[platform]}"
     img = Image.open(image_path)
     with cols[2*index+1]:
-        subcol1, subcol2 = st.columns([0.1, 1])
+        subcol1, subcol2 = st.columns([0.3, 1])
         subcol1.image(img, width=24, use_column_width=False)
         subcol2.write(f"{platform}")
         hide_img_fs = '''
