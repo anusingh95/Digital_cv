@@ -7,6 +7,7 @@ from email import encoders
 import os
 from email.header import Header
 from email.utils import formataddr
+import streamlit as st
 
 email = "anusingh26may@gmail.com"
 receiver_email = "anusinghpu26@gmail.com"
