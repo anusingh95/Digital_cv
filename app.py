@@ -74,7 +74,7 @@ with col2:
         mime = "application/octet-sream"
         
     )
-    st.write("📨", EMAIL)
+    st.write("📨\t", EMAIL)
 SOCIAL_MEDIA = {
     "LinkedIN": "https://www.linkedin.com/in/anu-singh-in/",
     "GitHub": "https://github.com/anusingh95",
