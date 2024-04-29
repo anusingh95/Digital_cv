@@ -89,14 +89,14 @@ st.write("#")
 SOCIAL_MEDIA={
     "LinkedIN":"https://www.linkedin.com/in/nilanjan-ghosh-a25747282/",
     "GitHub":"https://github.com/nil0711",
-    "X":"https://twitter.com/csnil0711",
+   
     
 
 }
 platform_images = {
     "LinkedIN": "linkedin.png",
     "GitHub": "github.png",
-    "X": "x.png",
+    
 }
 
     
