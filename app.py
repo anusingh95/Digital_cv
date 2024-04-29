@@ -105,7 +105,18 @@ st.write("#")
 #         st.markdown(hide_img_fs, unsafe_allow_html=True)
 
 
-tabs = st.tabs(["About Me","Ask Anything","Contact","Leave Your Review","My Blog"])
+tabs = ["About Me", "Ask Anything", "Contact", "Leave Your Review", "My Blog"]
+
+# Calculate the width of each tab
+tab_width = 100 / len(tabs)
+
+# Create the tabs
+with st.container():
+    for tab in tabs:
+        st.write(" " * int(tab_width/2))  # Adjust space to center the text
+        st.write(f"[{tab}]")
+        st.write(" " * int(tab_width/2))  # Adjust space to center the text
+        st.write("|")  # Add a separator between tabs
 
 with tabs[0]:
     st.write('#')
