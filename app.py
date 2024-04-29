@@ -22,7 +22,7 @@ def get_image_from_drive(link):
     url = f"https://drive.google.com/uc?export=view&id={file_id}"
     response = requests.get(url)
     return response.content
-connection_string = st.secrets['mongo']
+connection_string = st.secrets['api']['mongo']
 def validate_email(email):
     email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     return re.match(email_regex, email)
