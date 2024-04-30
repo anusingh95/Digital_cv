@@ -79,8 +79,8 @@ with col2:
     )
     
     subcol1, subcol2 = st.columns([0.12, 1])
-    subcol1.write("📨")
-    subcol2.write(EMAIL)
+    subcol1.write("📨",EMAIL)
+    # subcol2.write("")
 SOCIAL_MEDIA = {
     "LinkedIN": "https://www.linkedin.com/in/anu-singh-in/",
     "GitHub": "https://github.com/anusingh95",
