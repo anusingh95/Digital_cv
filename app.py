@@ -78,7 +78,7 @@ with col2:
         
     )
     
-    subcol1, subcol2 = st.columns([0.8, 1])
+    subcol1, subcol2 = st.columns([0.18, 1])
     subcol1.write("📨")
     subcol2.write(f"{EMAIL}")
 SOCIAL_MEDIA = {
