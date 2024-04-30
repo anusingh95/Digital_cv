@@ -57,7 +57,7 @@ with open(resume_file, "rb") as pdf_file:
     PDF = pdf_file.read()
 profile_pic = Image.open(profile_pic)
 
-crop_box = (0, 0, profile_pic.width, profile_pic.height - 0)
+crop_box = (0, profile_pic.height * 0.2, profile_pic.width, profile_pic.height)
 cropped_image =profile_pic.crop(crop_box)
 
 
