@@ -78,7 +78,7 @@ with col2:
         
     )
     
-    subcol1, subcol2 = st.columns([0.10, 1])
+    subcol1, subcol2 = st.columns([0.12, 1])
     subcol1.write("📨")
     subcol2.write(f"{EMAIL}")
 SOCIAL_MEDIA = {
@@ -125,7 +125,7 @@ with tabs[0]:
     I am an aspiring computer scientist with strong skills in C++, Java,Python, Web development, and applied machine learning. I have demonstrated the ability to create data-driven solutions using statistical modeling and algorithmic optimization techniques. I am passionate about innovation and learning new technologies. I am seeking a challenging role in a forward-thinking organization where I can contribute my expertise, collaborate on impactful projects, and push the technological boundaries.
 </div>
 ''', unsafe_allow_html=True)
-    st.markdown("""<font color=red>*If you want to learn more about me, my family background, my eduction, my poject and job related queries, just hop over to the "Ask Anything" tab. My AI assistant will provide you all the details.*</font>""", unsafe_allow_html=True)
+    st.markdown("""<font color=red>*If you want to learn more about me,my family background, my eduction,my poject and job related queries, just hop over to the "Ask Anything" tab. My AI assistant will provide you all the details.*</font>""", unsafe_allow_html=True)
     st.write("---")
     
     st.subheader("Experience & Qualifications")
