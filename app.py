@@ -130,11 +130,13 @@ with tabs[0]:
     
     st.subheader("Experience & Qualifications")
     st.write("""
-            - 🎓 Earned a Master's degree in Computer Science from Pondicherry University, in May 2024        
-            - 🎓 Earned a Bachelor's degree in Bachelor of Computer Application from Deen Dayal Upadhyaya University Gorakhpur(UP) in August 2021
-            - 🔎 Strong problem-solving and analytical skills
-            - 💬 Good communication and teamwork skills
-            """)
+- 💼 **Joined Seeds Fincap Pvt Ltd as Data Analyst** in June 2024
+- 🎓 **Earned a Master's degree in Computer Science** from Pondicherry University in May 2024        
+- 🎓 **Earned a Bachelor's degree in Computer Applications** from Deen Dayal Upadhyaya University, Gorakhpur (UP) in August 2021
+- 🔎 **Strong problem-solving and analytical skills**
+- 💬 **Excellent communication and teamwork abilities**
+""")
+
     st.write("---")
     st.subheader("Skills")
     st.write(
