@@ -45,7 +45,7 @@ PROJECTS={
     "📄 Multi-Dimensional CV with AI":"https://github.com/anusingh95/Digital_cv",
     "🤖 Machine Learning: AI-Driven Customer Support Chatbots":"https://chatbot-amy.streamlit.app/",
     "🛒 Web Development Project: Online Shopping Website":"https://github.com/anusingh95/MCA-miniproject",
-    "🎥 Machine Learning: AI-Powered Violence Detection through Surveillance Cameras":"Under Development",
+    "🎥 Machine Learning: AI-Powered Violence Detection through Surveillance Cameras":"",
 }
 
 st.set_page_config(page_title = PAGE_TITLE,page_icon=PAGE_ICON ,initial_sidebar_state="collapsed")
@@ -130,7 +130,7 @@ with tabs[0]:
     
     st.subheader("Experience & Qualifications")
     st.write("""
-            - 🎓 Pursuing a Master's degree in Computer Science from Pondicherry University, expected to graduate in May 2024        
+            - 🎓 Earned a Master's degree in Computer Science from Pondicherry University, in May 2024        
             - 🎓 Earned a Bachelor's degree in Bachelor of Computer Application from Deen Dayal Upadhyaya University Gorakhpur(UP) in August 2021
             - 🔎 Strong problem-solving and analytical skills
             - 💬 Good communication and teamwork skills
